@@ -32,6 +32,7 @@ Deletes all stored transactions.
 #### Description:
 Returns statistics for transactions that occurred in the last 60 seconds.
 
+#### Response
 ````json
 {
   "count": 10,
