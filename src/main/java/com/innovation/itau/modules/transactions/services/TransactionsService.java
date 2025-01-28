@@ -1,4 +1,4 @@
-package com.innovation.itau.modules.transactions.usecases;
+package com.innovation.itau.modules.transactions.services;
 
 import com.innovation.itau.infrastructure.UnprocessableEntity;
 import com.innovation.itau.modules.transactions.dto.TransactionRequestDTO;
@@ -30,4 +30,12 @@ public class TransactionsService {
     public void delete() {
         transactions.clear();
     }
+
+    public List<TransactionRequestDTO> getTransactions(Integer interval) {
+        OffsetDateTime dateTimeInterval = OffsetDateTime.now().minusSeconds(interval);
+
+        return transactions.stream()
+                .filter(transaction -> transaction.dateTime().isAfter(dateTimeInterval)).toList();
+    }
+
 }

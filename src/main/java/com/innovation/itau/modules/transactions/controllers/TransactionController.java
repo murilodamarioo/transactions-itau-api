@@ -1,7 +1,7 @@
 package com.innovation.itau.modules.transactions.controllers;
 
 import com.innovation.itau.modules.transactions.dto.TransactionRequestDTO;
-import com.innovation.itau.modules.transactions.usecases.TransactionsService;
+import com.innovation.itau.modules.transactions.services.TransactionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
